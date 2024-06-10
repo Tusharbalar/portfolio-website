@@ -13,22 +13,13 @@ export default function About() {
       transition={{ delay: 0.175 }}
       id="about"
     >
-      <p className="mb-3">
-        After graduating with a degree in{" "}
-        <span className="font-medium">Accounting</span>, I decided to pursue my
-        passion for programming. I enrolled in a coding bootcamp and learned{" "}
-        <span className="font-medium">full-stack web development</span>.{" "}
-        <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. I <span className="underline">love</span> the
-        feeling of finally figuring out a solution to a problem. My core stack
-        is{" "}
-        <span className="font-medium">
-          React, Next.js, Node.js, and MongoDB
-        </span>
-        . I am also familiar with TypeScript and Prisma. I am always looking to
-        learn new technologies. I am currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a software
-        developer.
+      <h2 className='text-3xl font-medium capitalize'>About me</h2>
+      <p className='mb-3'>
+        As an accomplished <span className="font-medium">Senior Software Engineer</span> with over <span className="italic">8+ years</span> of experience in JavaScript{" "}
+        development, I have honed my skills in creating robust, scalable, and efficient software solutions.{" "}
+        My journey in the tech industry has been marked by a consistent drive for excellence and innovation,
+        particularly in the security domain. I possess a solid background in <span className="font-medium">JavaScript, Angular, ReactJS, Splunk, and Python,</span>
+        which has enabled me to lead development teams effectively through complex coding, testing, and integration processes.
       </p>
 
       <p>
