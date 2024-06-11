@@ -2,8 +2,8 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
+import invoiceApp from "@/public/invoiceApp.png";
+import chatApp from "@/public/chatApp.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
 
 export const links = [
@@ -62,18 +62,18 @@ export const experiencesData = [
 
 export const projectsData = [
     {
-        title: "CorpComment",
+        title: "Chat App",
         description:
-            "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-        tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-        imageUrl: corpcommentImg,
+            "I served as a full-stack developer on this project for six months, creating a system that enabled users to chat with others.",
+        tags: ["Angular2", "Ionic", "Firebase", "bootstrap", "Figma"],
+        imageUrl: chatApp,
     },
     {
-        title: "rmtDev",
+        title: "Invoice App",
         description:
-            "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
+            `User can able to create invoice and store the data in the database, can see the realtime changes.`,
         tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-        imageUrl: rmtdevImg,
+        imageUrl: invoiceApp,
     },
     {
         title: "Word Analytics",
