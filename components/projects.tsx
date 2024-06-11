@@ -9,7 +9,9 @@ export default function Projects() {
       <div>
         {
           projectsData.map((project, index) => (
-            <Project key={index} />
+            <React.Fragment key={index}>
+              <Project {...project} />
+            </React.Fragment>
           ))
         }
       </div>
@@ -17,6 +19,13 @@ export default function Projects() {
   )
 }
 
-function Project() {
-  return <div></div>
+type ProjectProp = (typeof projectsData)[number];
+
+function Project({
+  title,
+  description,
+  tags,
+  imageUrl
+}: ProjectProp) {
+  return <div>{title}</div>
 }
