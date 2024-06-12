@@ -67,13 +67,15 @@ export const projectsData = [
             "I served as a full-stack developer on this project for six months, creating a system that enabled users to chat with others.",
         tags: ["Angular2", "Ionic", "Firebase", "bootstrap", "Figma"],
         imageUrl: chatApp,
+        githubUrl: 'https://github.com/Tusharbalar/ChatApp'
     },
     {
         title: "Invoice App",
         description:
             `User can able to create invoice and store the data in the database, can see the realtime changes.`,
-        tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
+        tags: ["Vue", "TypeScript", "CSS", "HTML", "MySQL"],
         imageUrl: invoiceApp,
+        githubUrl: 'https://github.com/Tusharbalar/vue-invoice'
     },
     {
         title: "Word Analytics",
@@ -81,6 +83,7 @@ export const projectsData = [
             "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
         tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
         imageUrl: wordanalyticsImg,
+        githubUrl: 'https://github.com/Tusharbalar/vue-invoice'
     },
 ] as const;
 
