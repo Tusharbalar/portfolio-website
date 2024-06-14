@@ -1,15 +1,15 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { motion } from 'framer-motion';
 import { links } from '@/lib/data';
 import Link from 'next/link';
 import clsx from 'clsx';
+import { ActiveSectionContext, useActiveSectionContext } from '@/context/active-section-context';
 
 export default function Header() {
 
-    const [activeSection, setActiveSection] = useState("Home");
-
+    const { activeSection, setActiveSection } = useActiveSectionContext();
     return (
         <header className='z-[999] relative'>
             <motion.div
@@ -46,7 +46,7 @@ export default function Header() {
                                             transition={{
                                                 type: 'spring',
                                                 stiffness: 380,
-                                                damping: 30
+                                                damping: 40
                                             }}
                                         ></motion.span>
                                     )
