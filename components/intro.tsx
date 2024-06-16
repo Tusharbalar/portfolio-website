@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { FaGithubSquare } from 'react-icons/fa';
 import { HiDownload } from 'react-icons/hi';
+import { FaNpm } from "react-icons/fa";
 import useSectionInView from '@/lib/hooks';
 
 export default function Intro() {
@@ -57,7 +58,7 @@ export default function Intro() {
             </div>
 
             <motion.h1
-                className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+                className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-3xl"
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
             >
@@ -107,6 +108,14 @@ export default function Intro() {
                     target="_blank"
                 >
                     <FaGithubSquare />
+                </a>
+
+                <a
+                    className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+                    href="https://www.npmjs.com/package/nxtlife-ionic2-rating"
+                    target="_blank"
+                >
+                    <FaNpm />
                 </a>
             </motion.div>
         </section>
