@@ -1,7 +1,8 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
+import { CiBadgeDollar } from "react-icons/ci";
+import { CiGlobe } from "react-icons/ci";
+import { GrShieldSecurity } from "react-icons/gr";
+import { CiVirus } from "react-icons/ci";
 import invoiceApp from "@/public/invoiceApp.png";
 import chatApp from "@/public/chatApp.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
@@ -35,28 +36,36 @@ export const links = [
 
 export const experiencesData = [
     {
-        title: "Graduated bootcamp",
-        location: "Miami, FL",
+        title: "Front-End Developer",
+        location: "Axelor India",
         description:
-            "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-        icon: React.createElement(LuGraduationCap),
-        date: "2019",
+            "I graduated after 4 years of studying. I immediately found a job as a front-end developer.",
+        icon: React.createElement(CiBadgeDollar),
+        date: "2014",
     },
     {
         title: "Front-End Developer",
-        location: "Orlando, FL",
+        location: "NxtLife Technologies Ltd",
         description:
-            "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-        icon: React.createElement(CgWorkAlt),
-        date: "2019 - 2021",
+            "I worked as a front-end developer for two years on a product called Yugma, where I utilized Angular, Ionic, Google Charts, and other front-end tools.",
+        icon: React.createElement(CiGlobe),
+        date: "2016 - 2018",
     },
     {
-        title: "Full-Stack Developer",
-        location: "Houston, TX",
+        title: "Software Engineer",
+        location: "Rapidops Inc.",
         description:
-            "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-        icon: React.createElement(FaReact),
-        date: "2021 - present",
+            "I worked on a CRM project called Salesmate, using a tech stack that included Angular, React.js, Next.js, TypeScript, Tailwind, Prisma, and MongoDB.",
+        icon: React.createElement(CiVirus),
+        date: "2028 - 2019",
+    },
+    {
+        title: "Sr. Software Engineer",
+        location: "Crest Data",
+        description:
+            "At Crest Data Systems, I have played a pivotal role in developing Splunk applications for data visualization and analysis, contributing significantly to the UCC framework and leading UI migrations from Backbone.js to React.js. My work on security products, including Cisco ASA, Cisco ESA, and Carbon Black, has deepened my expertise in the security domain, enhancing my ability to deliver solutions that meet stringent security standards.",
+        icon: React.createElement(GrShieldSecurity),
+        date: "2028 - 2019",
     },
 ] as const;
 
