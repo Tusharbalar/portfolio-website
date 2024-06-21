@@ -57,7 +57,7 @@ export const experiencesData = [
         description:
             "I worked on a CRM project called Salesmate, using a tech stack that included Angular, React.js, Next.js, TypeScript, Tailwind, Prisma, and MongoDB.",
         icon: React.createElement(CiVirus),
-        date: "2028 - 2019",
+        date: "2018 - 2019",
     },
     {
         title: "Sr. Software Engineer",
@@ -65,7 +65,7 @@ export const experiencesData = [
         description:
             "At Crest Data Systems, I have played a pivotal role in developing Splunk applications for data visualization and analysis, contributing significantly to the UCC framework and leading UI migrations from Backbone.js to React.js. My work on security products, including Cisco ASA, Cisco ESA, and Carbon Black, has deepened my expertise in the security domain, enhancing my ability to deliver solutions that meet stringent security standards.",
         icon: React.createElement(GrShieldSecurity),
-        date: "2028 - 2019",
+        date: "2019 - current",
     },
 ] as const;
 
