@@ -1,39 +1,38 @@
 "use server";
 
+import React from "react";
 import { Resend } from "resend";
+import { validateString } from "@/lib/utils";
+// import ContactFormEmail from "@/email/contact-form-email";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const validateString = (value: unknown, maxLength: number) => {
-  if (!value || typeof value !== "string" || value.length > maxLength) {
-    return false;
-  }
-  return true;
-}
-
 export const sendEmail = async (formData: FormData) => {
+  const senderEmail = formData.get("senderEmail");
+  const message = formData.get("message");
 
-  const senderEmail = formData.get('email');
-  const message = formData.get('message');
-
-  // simple server side validation
-  if (!validateString(sendEmail, 500)) {
+  // simple server-side validation
+  if (!validateString(senderEmail, 500)) {
     return {
-      error: "Invalid send email"
-    }
+      error: "Invalid sender email",
+    };
   }
 
   if (!validateString(message, 5000)) {
     return {
-      error: "Invalid message"
-    }
+      error: "Invalid message",
+    };
   }
 
-  resend.emails.send({
-    from: "onboarding@resend.dev",
-    to: "balar.tushar1@gmail.com",
-    reply_to: sendEmail,
-    subject: "Message from contact form",
-    text: message
-  })
-}
+  try {
+    await resend.emails.send({
+      from: 'Contact Form <onboarding@resend.dev>',
+      to: 'balar.tushar1@gmail.com',
+      subject: 'Message from Contact form',
+      reply_to: senderEmail as string,
+      text: message as string
+    });
+  } catch (error) {
+    console.log("error: ", error);
+  }
+};
