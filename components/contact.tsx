@@ -33,7 +33,9 @@ export default function Contact() {
       <p className='text-gray-700 -mt-6'>Please contact me directly at <a href='mailto:balar.tushar1@gmail.com'>balar.tushar1@gmail.com</a>{" "}
         or through this form.
       </p>
-      <form className='mt-10 flex flex-col' action={sendEmail}>
+      <form className='mt-10 flex flex-col' action={async (formData) => {
+        await sendEmail(formData);
+      }}>
         <input
           type='email'
           name="email"
