@@ -2,15 +2,14 @@
 
 import React from 'react'
 import SectionHeading from './section-heading'
-import { FaPaperPlane } from 'react-icons/fa';
-import { motion } from 'framer-motion';
 import useSectionInView from '@/lib/hooks';
+import { motion } from 'framer-motion';
 import { sendEmail } from '@/actions/sendEmail';
+import SubmitBtn from './submit-btn';
 
 export default function Contact() {
 
   const { ref } = useSectionInView('Contact', 0.5);
-
   return (
     <motion.section
       id="contact"
