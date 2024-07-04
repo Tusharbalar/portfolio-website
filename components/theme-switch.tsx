@@ -10,11 +10,13 @@ export default function ThemeSwitch() {
 
   useEffect(() => {
     const localTheme = window.localStorage.getItem("theme") as Theme | null;
+    console.log('localTheme', localTheme)
     if (localTheme) {
       setTheme(localTheme);
 
       if (localTheme === "dark") {
         window.localStorage.setItem("theme", "dark");
+        document.documentElement.classList.add("dark");
       }
     } else if (window.matchMedia("(prefers-color-scheme: dark").matches) {
       setTheme("dark");
