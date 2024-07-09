@@ -33,25 +33,27 @@ export default function Contact() {
       <p className='text-gray-700 -mt-6'>Please contact me directly at <a href='mailto:balar.tushar1@gmail.com'>balar.tushar1@gmail.com</a>{" "}
         or through this form.
       </p>
-      <form className='mt-10 flex flex-col' action={async (formData) => {
-        const { data, error } = await sendEmail(formData);
-        if (error) {
-          toast.error(error);
-          return;
-        }
+      <form
+        className="mt-10 flex flex-col dark:text-black"
+        action={async (formData) => {
+          const { data, error } = await sendEmail(formData);
+          if (error) {
+            toast.error(error);
+            return;
+          }
 
-        toast.success("Email sent successfully!");
-      }}>
+          toast.success("Email sent successfully!");
+        }}>
         <input
           type='email'
           name="senderEmail"
-          className='h-14 px-4 rounded-lg borderBlack'
+          className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           placeholder='Your email'
           required
           maxLength={500}
         />
         <textarea
-          className='h-52 my-3 rounded-lg borderBlack p-4'
+          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           name="message"
           placeholder='Your message'
           required
